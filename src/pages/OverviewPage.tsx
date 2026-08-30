@@ -8,7 +8,7 @@ export function OverviewPage() {
         <>
             <PageHeading title="Good afternoon." description='Your academic day,  deadlines, and all important scedule will converage here.'/>
 
-            <div className="grid. gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(320px,0.75fr)]">
+            <div className="grid gap-4 xl:grid-cols-[minmax(0,1.45fr)_minmax(320px,0.75fr)]">
                 <TodaySchedule />
                 <UrgentCard />
             </div>
