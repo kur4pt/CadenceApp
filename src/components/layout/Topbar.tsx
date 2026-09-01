@@ -1,6 +1,5 @@
 import { Bell, Menu, Plus, Search } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
-
 const pageNames: Record<string, string> = {
   '/overview': 'Overview',
   '/calendar': 'Calendar',
@@ -40,6 +39,7 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
           <Plus size={16} />
           <span className="hidden sm:inline">New</span>
         </button>
+
       </div>
     </header>
   )

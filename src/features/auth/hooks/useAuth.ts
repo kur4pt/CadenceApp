@@ -26,6 +26,11 @@ export function useAuth() {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+        console.log(`[Cadence Auth]`, {
+            event,
+            userId: session?.user.id,
+            email: session?.user.email,
+        })
         queryClient.setQueryData(AUTH_SESSION_KEY, session)
     })
 

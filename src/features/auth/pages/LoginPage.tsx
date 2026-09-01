@@ -53,7 +53,7 @@ export function LoginPage() {
                  <label className='flex flex-col gap-2'>
                     Email
                     <input 
-                        className='glass w-full rounded-[16px] p-4'
+                        className='glass w-full rounded-2xl p-4'
                         type="email"
                         autoComplete="email"
                         value={email}
@@ -65,7 +65,7 @@ export function LoginPage() {
                 <label className='flex flex-col gap-2'>
                     Password
                     <input
-                        className='glass w-full rounded-[16px] p-4'
+                        className='glass w-full rounded-2xl p-4'
                         type="password"
                         autoComplete="current-password"
                         value={password}

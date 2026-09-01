@@ -1,32 +1,25 @@
-import {
-    BookOpen,
-    CalendarDays,
-    ClipboardCheck,
-    FileUp,
-    GraduationCap,
-    LayoutDashboard,
-    Settings,
-    Sparkles,
-    X,
-  } from 'lucide-react'
-  import { NavLink } from 'react-router-dom'
-  
-  const navItems = [
+import { BookOpen, CalendarDays, ClipboardCheck, FileUp, GraduationCap,
+    LayoutDashboard, Settings, Sparkles, X, } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
+//import { SignOutButton } from '../../features/auth/components/SignOutButton'
+import { AccountCard } from '../../features/auth/components/AccountCard'
+
+const navItems = [
     { label: 'Overview', to: '/overview', icon: LayoutDashboard },
     { label: 'Calendar', to: '/calendar', icon: CalendarDays },
     { label: 'Classes', to: '/classes', icon: BookOpen },
     { label: 'Assignments', to: '/assignments', icon: ClipboardCheck },
     { label: 'Exams', to: '/exams', icon: GraduationCap },
     { label: 'Uploads', to: '/uploads', icon: FileUp },
-  ]
+]
   
-  type SidebarProps = {
+type SidebarProps = {
     mobileOpen: boolean
     onMobileClose: () => void
-  }
+}
   
-  function SidebarContent({ onNavigate, mobile }: { onNavigate?: () => void; mobile?: boolean }) {
-    return (
+function SidebarContent({ onNavigate, mobile }: { onNavigate?: () => void; mobile?: boolean }) {
+  return (
       <>
         <div className="mb-7 flex items-center gap-3 px-2">
           <div className="grid size-10 place-items-center rounded-2xl bg-[rgb(var(--foreground))] text-[rgb(var(--surface))] shadow-sm">
@@ -80,20 +73,14 @@ import {
             Settings
           </NavLink>
   
-          <div className="flex items-center gap-3 rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface)/0.72)] p-3">
-            <div className="grid size-9 place-items-center rounded-full bg-[rgb(var(--foreground))] text-xs font-semibold text-[rgb(var(--surface))]">NU</div>
-            <div className="min-w-0">
-              <p className="truncate text-sm font-medium">Student</p>
-              <p className="truncate text-xs text-[rgb(var(--muted))]">MVP account</p>
-            </div>
-          </div>
+          <AccountCard />
         </div>
       </>
     )
-  }
+}
   
-  export function Sidebar({ mobileOpen, onMobileClose }: SidebarProps) {
-    return (
+export function Sidebar({ mobileOpen, onMobileClose }: SidebarProps) {
+  return (
       <>
         <aside className="hidden w-[250px] shrink-0 flex-col border-r border-[rgb(var(--border)/0.78)] bg-[rgb(var(--surface)/0.48)] px-4 py-5 md:flex">
           <SidebarContent />
@@ -108,6 +95,6 @@ import {
           </div>
         )}
       </>
-    )
-  }
+  )
+}
   
