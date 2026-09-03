@@ -26,7 +26,7 @@ function SidebarContent({ onNavigate, mobile }: { onNavigate?: () => void; mobil
             <Sparkles size={19} strokeWidth={2.1} />
           </div>
           <div>
-            <p className="text-[15px] font-semibold tracking-[-0.025em]">Cadence</p>
+            <p className="text-[15px] font-semibold tracking-tight">Cadence</p>
             <p className="text-xs text-[rgb(var(--muted))]">Student workspace</p>
           </div>
           {mobile && (
@@ -47,7 +47,7 @@ function SidebarContent({ onNavigate, mobile }: { onNavigate?: () => void; mobil
                 `focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition ${
                   isActive
                     ? 'bg-[rgb(var(--surface))] font-medium text-[rgb(var(--foreground))] shadow-sm ring-1 ring-[rgb(var(--border))]'
-                    : 'text-[rgb(var(--muted))] hover:bg-[rgb(var(--surface)/0.65)] hover:text-[rgb(var(--foreground))]'
+                    : 'text-[rgb(var(--muted))] hover:bg-[rgb(var(--surface)/0.415)] hover:text-[rgb(var(--accent))]'
                 }`
               }
             >
@@ -61,19 +61,9 @@ function SidebarContent({ onNavigate, mobile }: { onNavigate?: () => void; mobil
           <NavLink
             to="/settings"
             onClick={onNavigate}
-            className={({ isActive }) =>
-              `focus-ring flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition ${
-                isActive
-                  ? 'bg-[rgb(var(--surface))] font-medium shadow-sm ring-1 ring-[rgb(var(--border))]'
-                  : 'text-[rgb(var(--muted))] hover:bg-[rgb(var(--surface)/0.65)] hover:text-[rgb(var(--foreground))]'
-              }`
-            }
           >
-            <Settings size={17} />
-            Settings
+            <AccountCard />
           </NavLink>
-  
-          <AccountCard />
         </div>
       </>
     )

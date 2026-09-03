@@ -40,8 +40,8 @@ export function LoginPage() {
   }
 
   return (
-    <main className='grid min-h-screen place-items-center p-5'>
-        <section className='glass w-full max-w-md rounded-[28px] p-7'> 
+    <main className='grid  grid-cols-2 min-h-screen place-items-center p-5'>
+        <section className='glass w-full max-w-md rounded-[28px] p-8'> 
 
             <div className='mb-7 flex flex-col items-center gap-5'>
                 <h1 className='text-2xl font-semibold tracking-[-0.04em]'>Welcome back</h1>
@@ -89,6 +89,13 @@ export function LoginPage() {
                 </button>
             </form>
         </section>
+
+        {/*   
+          add interative assii art.
+          add interactive box that can be moved around and interacts with ascii art. 
+        
+        */}
+
     </main>
   )
 }
