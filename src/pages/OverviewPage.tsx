@@ -1,5 +1,5 @@
 import { CalendarCheck2, FileUp, Sparkles } from 'lucide-react'
-import { UrgentCard } from '../features/dashboard/UrgantCard'
+import { UrgentCard } from '../features/dashboard/UrgentCard'
 import { TodaySchedule } from '../features/dashboard/TodaySchedule'
 import { PageHeading } from '../components/ui/PageHeading'
 
