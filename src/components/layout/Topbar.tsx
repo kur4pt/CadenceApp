@@ -14,13 +14,12 @@ export function Topbar({ onMenu }: { onMenu: () => void }) {
   const { pathname } = useLocation()
 
   return (
-    <header className="flex h-[72px] items-center justify-between border-b border-[rgb(var(--border)/0.8)] px-4 md:px-6 lg:px-8">
+    <header className="flex h-18 items-center justify-between border-b border-[rgb(var(--border)/0.8)] px-4 md:px-6 lg:px-8">
       <div className="flex items-center gap-3">
         <button onClick={onMenu} className="focus-ring grid size-9 place-items-center rounded-xl border border-[rgb(var(--border))] md:hidden" aria-label="Open navigation">
           <Menu size={18} />
         </button>
         <div>
-          <p className="text-xs text-[rgb(var(--muted))]">Cadence</p>
           <h1 className="text-sm font-semibold tracking-[-0.015em]">{pageNames[pathname] ?? 'Workspace'}</h1>
         </div>
       </div>

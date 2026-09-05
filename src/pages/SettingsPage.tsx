@@ -32,8 +32,8 @@ export function SettingsPage() {
                 <section className="surface-card p-5">
                     <h3 className="mb-4 text-sm font-semibold"> Appearance</h3>
                     <div className="flex gap-2">
-                        <button onClick={() => setMode('light')} className={`focus-ring flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${mode=== 'light' ? 'border-[rgb(var(-foreground))]' : 'border-[rgb(var(--border))]'}`}><Sun size={16}/> Light</button>
-                        <button onClick={() => setMode('dark')} className={`focus-ring flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${mode=== 'light' ? 'border-[rgb(var(-foreground))]' : 'border-[rgb(var(--border))]'}`}><Moon size={16}/>Dark</button>
+                        <button onClick={() => setMode('light')} className={`focus-ring flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${mode=== 'light' ? 'border-[rgb(var(--foreground))]' : 'border-[rgb(var(--border))]'}`}><Sun size={16}/> Light</button>
+                        <button onClick={() => setMode('dark')} className={`focus-ring flex items-center gap-2 rounded-xl border px-3 py-2 text-sm ${mode=== 'light' ? 'border-[rgb(var(--foreground))]' : 'border-[rgb(var(--border))]'}`}><Moon size={16}/>Dark</button>
                     </div>
                 </section>
             </div>
