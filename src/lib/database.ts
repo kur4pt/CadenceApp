@@ -93,6 +93,47 @@ export interface Database {
           updated_at?: string
         }
       }
+      course_meetings: {
+        Row: {
+            id: string
+            course_id: string
+            weekday: number
+            starts_at: string
+            ends_at: string
+            timezone: string
+            starts_on: string
+            ends_on: string
+            location: string | null
+            created_at: string
+            updated_at: string
+        }
+        Insert: {
+            id?: string
+            course_id: string
+            weekday: number
+            starts_at: string
+            ends_at: string
+            timezone: string
+            starts_on: string
+            ends_on: string
+            location?: string | null
+            created_at?: string
+            updated_at?: string
+        }
+        Update: {
+            id?: string
+            course_id?: string
+            weekday?: number
+            starts_at?: string
+            ends_at?: string
+            timezone?: string
+            starts_on?: string
+            ends_on?: string
+            location?: string | null
+            created_at?: string
+            updated_at?: string
+        }
+      }
       calendar_events: {
         Row: {
           id: string
