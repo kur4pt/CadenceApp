@@ -117,7 +117,7 @@ export const meetingsService = {
             throw new Error('A valid date is required')
         }
         await requireUser()
-        const { data, error } = await supabase.rpc('get_today_meetings', {
+        const { data, error } = await supabase.rpc('today_course_meetings', {
             at_instant: at.toISOString(),
         })
         if (error) throw error
